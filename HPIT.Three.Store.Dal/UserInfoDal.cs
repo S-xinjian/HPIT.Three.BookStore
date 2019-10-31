@@ -36,7 +36,8 @@ namespace HPIT.Three.Store.Dal
         {
             SqlParameter[] par = new SqlParameter[]
             {
-                new SqlParameter("@UserInfoName",name)
+                new SqlParameter("@UserInfoName",name),
+                new SqlParameter("@UserInfoName",pwd)
             };
             DataTable table = SQLHelper.Sel("", par);
             List<UserInfo> list = new List<UserInfo>();

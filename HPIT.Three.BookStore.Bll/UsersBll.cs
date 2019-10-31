@@ -23,7 +23,7 @@ namespace HPIT.Three.BookStore.Bll
 
         public List<Users> Sel(string name = "", string pwd = "", int par1 = 0, int par2 = 0)
         {
-            throw new NotImplementedException();
+            return dal.Sel(name, pwd, par1, par2);
         }
 
         public bool Upd(Users model)

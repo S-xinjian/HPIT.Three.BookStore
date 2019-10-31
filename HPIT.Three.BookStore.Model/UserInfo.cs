@@ -12,6 +12,6 @@ namespace HPIT.Three.BookStore.Model
         public string UserInfoName { get; set; }
         public string UserInfoSex { get; set; }
         public string UserInfoAddress { get; set; }
-        public int UserInfoPhone { get; set; }
+        public string UserInfoPhone { get; set; }
     }
 }

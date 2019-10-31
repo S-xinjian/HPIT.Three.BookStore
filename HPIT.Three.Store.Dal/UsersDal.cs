@@ -39,12 +39,13 @@ namespace HPIT.Three.Store.Dal
                 new SqlParameter("@UsersPassword",pwd),
             };
             List<Users> list = new List<Users>();
-            DataTable table = SQLHelper.Sel("",par);
+            DataTable table = SQLHelper.Sel("U_Log", par);
             foreach (DataRow row in table.Rows)
             {
                 Users model = new Users() 
                 {
-                    
+                    UsersAccount = Convert.ToString(row["UsersAccount"]),
+                    UsersPassword = Convert.ToString(row["UsersPassword"])
                 };
                 list.Add(model);
             }

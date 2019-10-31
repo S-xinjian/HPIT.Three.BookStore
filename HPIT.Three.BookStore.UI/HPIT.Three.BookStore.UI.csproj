@@ -89,6 +89,16 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HPIT.Three.BookStore.Bll\HPIT.Three.BookStore.Bll.csproj">
+      <Project>{51d04637-26ab-4fd9-a25d-b27416419a57}</Project>
+      <Name>HPIT.Three.BookStore.Bll</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HPIT.Three.BookStore.Model\HPIT.Three.BookStore.Model.csproj">
+      <Project>{e5cd52c3-d1ff-47be-b272-257b39a87b4e}</Project>
+      <Name>HPIT.Three.BookStore.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
