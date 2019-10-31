@@ -10,15 +10,15 @@ namespace HPIT.Three.BookStore.Bll
 {
     public class UserOrderBll : IBaseDal<UserOrder>
     {
-        private UserOrder dal = new UserOrder();
+        private UserOrderDal dal = new UserOrderDal();
         public bool Del(UserOrder model)
         {
-            throw new NotImplementedException();
+            return dal.Del(model);
         }
 
         public bool ins(UserOrder model)
         {
-            throw new NotImplementedException();
+            return dal.ins(model);
         }
 
         public List<UserOrder> Sel(string name = "", string pwd = "", int par1 = 0, int par2 = 0)
@@ -28,7 +28,7 @@ namespace HPIT.Three.BookStore.Bll
 
         public bool Upd(UserOrder model)
         {
-            throw new NotImplementedException();
+            return dal.Upd(model);
         }
     }
 }

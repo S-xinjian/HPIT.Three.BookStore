@@ -10,15 +10,15 @@ namespace HPIT.Three.BookStore.Bll
 {
     public class FeelBll : IBaseDal<Feel>
     {
-        private Feel dal = new Feel();
+        private FeelDal dal = new FeelDal();
         public bool Del(Feel model)
         {
-            throw new NotImplementedException();
+            return dal.Del(model);
         }
 
         public bool ins(Feel model)
         {
-            throw new NotImplementedException();
+            return dal.ins(model);
         }
 
         public List<Feel> Sel(string name = "", string pwd = "", int par1 = 0, int par2 = 0)
@@ -28,7 +28,7 @@ namespace HPIT.Three.BookStore.Bll
 
         public bool Upd(Feel model)
         {
-            throw new NotImplementedException();
+            return dal.Upd(model);
         }
     }
 }

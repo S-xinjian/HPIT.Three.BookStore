@@ -10,15 +10,15 @@ namespace HPIT.Three.BookStore.Bll
 {
     public class AdminBll : IBaseDal<Admin>
     {
-        private Admin dal = new Admin();
+        private AdminDal dal = new AdminDal();
         public bool Del(Admin model)
         {
-            throw new NotImplementedException();
+            return dal.Del(model);
         }
 
         public bool ins(Admin model)
         {
-            throw new NotImplementedException();
+            return dal.ins(model);
         }
 
         public List<Admin> Sel(string name = "", string pwd = "", int par1 = 0, int par2 = 0)

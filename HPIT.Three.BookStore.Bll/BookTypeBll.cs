@@ -10,15 +10,15 @@ namespace HPIT.Three.BookStore.Bll
 {
     public class BookTypeBll : IBaseDal<BookType>
     {
-        private BookType dal = new BookType();
+        private BookTypeDal dal = new BookTypeDal();
         public bool Del(BookType model)
         {
-            throw new NotImplementedException();
+            return dal.Del(model);
         }
 
         public bool ins(BookType model)
         {
-            throw new NotImplementedException();
+            return dal.ins(model);
         }
 
         public List<BookType> Sel(string name = "", string pwd = "", int par1 = 0, int par2 = 0)
@@ -28,7 +28,7 @@ namespace HPIT.Three.BookStore.Bll
 
         public bool Upd(BookType model)
         {
-            throw new NotImplementedException();
+            return dal.Upd(model);
         }
     }
 }
