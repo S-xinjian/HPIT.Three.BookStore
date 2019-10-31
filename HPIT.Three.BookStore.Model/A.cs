@@ -10,5 +10,6 @@ namespace HPIT.Three.BookStore.Model
     {
         public int ID { get; set; }
         public string Name { get; set; }
+        public int num { get; set; }
     }
 }
