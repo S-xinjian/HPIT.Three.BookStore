@@ -42,9 +42,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminDal.cs" />
+    <Compile Include="BookDal.cs" />
+    <Compile Include="BookTypeDal.cs" />
+    <Compile Include="FeelBackDal.cs" />
+    <Compile Include="FeelDal.cs" />
+    <Compile Include="FeelInfoDal.cs" />
     <Compile Include="IBaseDal.cs" />
+    <Compile Include="MusicDal.cs" />
+    <Compile Include="ShopDal.cs" />
+    <Compile Include="ShopInfoDal.cs" />
     <Compile Include="SQLHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserAddDal.cs" />
+    <Compile Include="UserInfoDal.cs" />
+    <Compile Include="UserOrderDal.cs" />
+    <Compile Include="UsersDal.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HPIT.Three.BookStore.Model\HPIT.Three.BookStore.Model.csproj">

@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace HPIT.Three.BookStore.Model
 {
-   public class A
+    public class FeelInfo
     {
-        public int ID { get; set; }
-        public string Name { get; set; }
-        public int num { get; set; }
+        public int FeelInfoID { get; set; }
+        public string FeelName { get; set; }
+        public int FeelPhone { get; set; }
     }
 }

@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HPIT.Three.BookStore.Bll", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HPIT.Three.BookStore.Model", "HPIT.Three.BookStore.Model\HPIT.Three.BookStore.Model.csproj", "{E5CD52C3-D1FF-47BE-B272-257B39A87B4E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HPIT.Three.Store.Dal", "HPIT.Three.Store.Dal\HPIT.Three.Store.Dal.csproj", "{40936A85-5CA2-4D70-84D6-A1F2D72CD57A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HPIT.Three.BookStore.Dal", "HPIT.Three.Store.Dal\HPIT.Three.BookStore.Dal.csproj", "{40936A85-5CA2-4D70-84D6-A1F2D72CD57A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

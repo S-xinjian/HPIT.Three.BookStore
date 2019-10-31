@@ -10,13 +10,13 @@ namespace HPIT.Three.Store.Dal
 {
     public interface IBaseDal<T> where T : class, new()
     {
-        List<T> Sel(string proc,string name = "",string pwd = "",int par1=0,int par2 = 0);
+        List<T> Sel(string name = "",string pwd = "",int par1=0,int par2 = 0);
 
-        bool ins(string proc, T Model);
+        bool ins( T model);
 
-        bool Del(string proc, T Model);
+        bool Del( T model);
 
-        bool Upd(string proc, T Model);
+        bool Upd( T model);
 
     }
 }
