@@ -10,6 +10,6 @@ namespace HPIT.Three.BookStore.Model
     {
         public int AdminID { get; set; }
         public string AdminAccount { get; set; }
-        public int AdminPassword { get; set; }
+        public string AdminPassword { get; set; }
     }
 }

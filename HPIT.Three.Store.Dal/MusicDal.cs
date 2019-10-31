@@ -41,6 +41,17 @@ namespace HPIT.Three.Store.Dal
         {
             List<Music> list = new List<Music>();
             DataTable table = SQLHelper.Sel("");
+            foreach (DataRow row in table.Rows)
+            {
+                Music model = new Music() 
+                {
+                    MusicID = Convert.ToInt32(row["MusicID"]),
+                    Musician = Convert.ToString(row["Musician"]),
+                    Musicname = Convert.ToString(row["Musicname"]),
+                    MusicSrc = Convert.ToString(row["MusicSrc"]),
+                };
+                list.Add(model);
+            }
             return list;
         }
 

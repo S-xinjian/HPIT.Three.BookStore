@@ -13,22 +13,50 @@ namespace HPIT.Three.Store.Dal
     {
         public bool Del(Shop model)
         {
-            throw new NotImplementedException();
+            SqlParameter[] par = new SqlParameter[]
+            {
+                new SqlParameter("@ShopID",model.ShopID),
+            };
+            return SQLHelper.NanQuery("", par);
         }
 
         public bool ins(Shop model)
         {
-            throw new NotImplementedException();
+            SqlParameter[] par = new SqlParameter[]
+            {
+                new SqlParameter("@ShopAccount",model.ShopAccount),
+                new SqlParameter("@ShopInfoID",model.ShopInfoID),
+                new SqlParameter("@ShopPassword",model.ShopPassword),
+            };
+            return SQLHelper.NanQuery("", par);
         }
 
         public List<Shop> Sel(string name = "", string pwd = "", int par1 = 0, int par2 = 0)
         {
-            throw new NotImplementedException();
+            SqlParameter[] par = new SqlParameter[]
+            {
+                new SqlParameter("@",name)
+            };
+            DataTable table = SQLHelper.Sel("",par);
+            List<Shop> list = new List<Shop>();
+            foreach (DataRow row in table.Rows)
+            {
+                Shop model = new Shop() 
+                {
+                    
+                };
+                list.Add(model);
+            }
+            return list;
         }
 
         public bool Upd(Shop model)
         {
-            throw new NotImplementedException();
+            SqlParameter[] par = new SqlParameter[]
+            {
+                new SqlParameter("@ShopID",model.ShopID),
+            };
+            return SQLHelper.NanQuery("", par);
         }
     }
 }

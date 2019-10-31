@@ -13,22 +13,55 @@ namespace HPIT.Three.Store.Dal
     {
         public bool Del(UserInfo model)
         {
-            throw new NotImplementedException();
+            SqlParameter[] par = new SqlParameter[]
+            {
+                new SqlParameter("@UserInfoID",model.UserInfoID)
+            };
+            return SQLHelper.NanQuery("", par);
         }
 
         public bool ins(UserInfo model)
         {
-            throw new NotImplementedException();
+            SqlParameter[] par = new SqlParameter[]
+            {
+                new SqlParameter("@UserInfoAddress",model.UserInfoAddress),
+                new SqlParameter("@UserInfoName",model.UserInfoName),
+                new SqlParameter("@UserInfoPhone",model.UserInfoPhone),
+                new SqlParameter("@UserInfoSex",model.UserInfoSex),
+            };
+            return SQLHelper.NanQuery("", par);
         }
 
         public List<UserInfo> Sel(string name = "", string pwd = "", int par1 = 0, int par2 = 0)
         {
-            throw new NotImplementedException();
+            SqlParameter[] par = new SqlParameter[]
+            {
+                new SqlParameter("@UserInfoName",name)
+            };
+            DataTable table = SQLHelper.Sel("", par);
+            List<UserInfo> list = new List<UserInfo>();
+            foreach (DataRow row in table.Rows)
+            {
+                UserInfo model = new UserInfo() 
+                {
+                    
+                };
+                list.Add(model);
+            }
+            return list;
         }
 
         public bool Upd(UserInfo model)
         {
-            throw new NotImplementedException();
+            SqlParameter[] par = new SqlParameter[]
+            {
+                new SqlParameter("@UserInfoID",model.UserInfoID),
+                new SqlParameter("@UserInfoAddress",model.UserInfoAddress),
+                new SqlParameter("@UserInfoName",model.UserInfoName),
+                new SqlParameter("@UserInfoPhone",model.UserInfoPhone),
+                new SqlParameter("@UserInfoSex",model.UserInfoSex),
+            };
+            return SQLHelper.NanQuery("", par);
         }
     }
 }

@@ -13,22 +13,48 @@ namespace HPIT.Three.Store.Dal
     {
         public bool Del(BookType model)
         {
-            throw new NotImplementedException();
+            SqlParameter[] par = new SqlParameter[] 
+            {
+                new SqlParameter("@",model)
+            };
+            return SQLHelper.NanQuery("",par);
         }
 
         public bool ins(BookType model)
         {
-            throw new NotImplementedException();
+            SqlParameter[] par = new SqlParameter[]
+            {
+                new SqlParameter("@",model)
+            };
+            return SQLHelper.NanQuery("", par);
         }
 
         public List<BookType> Sel(string name = "", string pwd = "", int par1 = 0, int par2 = 0)
         {
-            throw new NotImplementedException();
+            SqlParameter[] par = new SqlParameter[]
+            {
+                new SqlParameter("@",name)
+            };
+            List<BookType> list = new List<BookType>();
+            DataTable table = SQLHelper.Sel("", par);
+            foreach (DataRow row in table.Rows)
+            {
+                BookType model = new BookType() 
+                {
+                    
+                };
+                list.Add(model);
+            }
+            return list;
         }
 
         public bool Upd(BookType model)
         {
-            throw new NotImplementedException();
+            SqlParameter[] par = new SqlParameter[]
+            {
+                new SqlParameter("@",model)
+            };
+            return SQLHelper.NanQuery("", par);
         }
     }
 }

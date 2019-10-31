@@ -1,5 +1,4 @@
-﻿
-using HPIT.Three.BookStore.Model;
+﻿using HPIT.Three.BookStore.Model;
 using HPIT.Three.Store.Dal;
 using System;
 using System.Collections.Generic;

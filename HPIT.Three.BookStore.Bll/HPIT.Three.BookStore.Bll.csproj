@@ -41,8 +41,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminBll.cs" />
+    <Compile Include="BookBll.cs" />
+    <Compile Include="BookTypeBll.cs" />
+    <Compile Include="FeelBackBll.cs" />
+    <Compile Include="FeelBll.cs" />
+    <Compile Include="FeelInfoBll.cs" />
     <Compile Include="MusicBll.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShopBll.cs" />
+    <Compile Include="ShopInfoBll.cs" />
+    <Compile Include="UserAddBll.cs" />
+    <Compile Include="UserInfoBll.cs" />
+    <Compile Include="UserOrderBll.cs" />
+    <Compile Include="UsersBll.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HPIT.Three.BookStore.Model\HPIT.Three.BookStore.Model.csproj">

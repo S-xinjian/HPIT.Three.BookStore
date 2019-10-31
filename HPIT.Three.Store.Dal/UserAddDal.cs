@@ -13,22 +13,54 @@ namespace HPIT.Three.Store.Dal
     {
         public bool Del(UserAdd model)
         {
-            throw new NotImplementedException();
+            SqlParameter[] par = new SqlParameter[]
+            {
+                new SqlParameter("@UserAddID",model.UserAddID),
+            };
+            return SQLHelper.NanQuery("", par);
         }
 
         public bool ins(UserAdd model)
         {
-            throw new NotImplementedException();
+            SqlParameter[] par = new SqlParameter[]
+            {
+                new SqlParameter("@",model.UserAddBookID),
+                new SqlParameter("@",model.UserAddBookNmae),
+                new SqlParameter("@",model.UserAddName),
+            };
+            return SQLHelper.NanQuery("", par);
         }
 
         public List<UserAdd> Sel(string name = "", string pwd = "", int par1 = 0, int par2 = 0)
         {
-            throw new NotImplementedException();
+            SqlParameter[] par = new SqlParameter[]
+            {
+                new SqlParameter("@UserAddBookNmae",name),
+                new SqlParameter("@UserAddName",pwd),
+            };
+            DataTable table = SQLHelper.Sel("", par);
+            List<UserAdd> list = new List<UserAdd>();
+            foreach (DataRow row in table.Rows)
+            {
+                UserAdd model = new UserAdd() 
+                {
+                    
+                };
+                list.Add(model);
+            }
+            return list;
         }
 
         public bool Upd(UserAdd model)
         {
-            throw new NotImplementedException();
+            SqlParameter[] par = new SqlParameter[]
+            {
+                new SqlParameter("@UserAddID",model.UserAddID),
+                new SqlParameter("@UserAddBookID",model.UserAddBookID),
+                new SqlParameter("@UserAddBookNmae",model.UserAddBookNmae),
+                new SqlParameter("@UserAddName",model.UserAddName),
+            };
+            return SQLHelper.NanQuery("", par);
         }
     }
 }

@@ -13,22 +13,53 @@ namespace HPIT.Three.Store.Dal
     {
         public bool Del(Feel model)
         {
-            throw new NotImplementedException();
+            SqlParameter[] par = new SqlParameter[]
+            {
+                new SqlParameter("@FeelID",model.FeelID)
+            };
+            return SQLHelper.NanQuery("", par);
         }
 
         public bool ins(Feel model)
         {
-            throw new NotImplementedException();
+            SqlParameter[] par = new SqlParameter[]
+            {
+                new SqlParameter("@FeelAccount",model.FeelAccount),
+                new SqlParameter("@FeelInfoID",model.FeelInfoID),
+                new SqlParameter("@FeelPassWord",model.FeelPassWord),
+            };
+            return SQLHelper.NanQuery("", par);
         }
 
         public List<Feel> Sel(string name = "", string pwd = "", int par1 = 0, int par2 = 0)
         {
-            throw new NotImplementedException();
+            SqlParameter[] par = new SqlParameter[] 
+            {
+                new SqlParameter("@FeelAccount",name),
+                new SqlParameter("@FeelPassWord",pwd),
+            };
+            DataTable table = SQLHelper.Sel("",par);
+            List<Feel> list = new List<Feel>();
+            foreach (DataRow row in table.Rows)
+            {
+                Feel model = new Feel() 
+                {
+                    
+                };
+                list.Add(model);
+            }
+            return list;
         }
 
         public bool Upd(Feel model)
         {
-            throw new NotImplementedException();
+            SqlParameter[] par = new SqlParameter[]
+            {
+                new SqlParameter("@FeelAccount",model.FeelAccount),
+                new SqlParameter("@FeelInfoID",model.FeelInfoID),
+                new SqlParameter("@FeelPassWord",model.FeelPassWord),
+            };
+            return SQLHelper.NanQuery("", par);
         }
     }
 }
